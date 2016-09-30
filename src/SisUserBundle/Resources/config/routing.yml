@@ -1,0 +1,36 @@
+sis_user_homepage:
+    path:     /
+    defaults: { _controller: SisUserBundle:Default:index }
+sis_user_articulos:
+    path:     /user/articulos/{page}
+    defaults: { _controller: SisUserBundle:User:articulos, page:100 } 
+sis_user_index:
+    path:     /user/index
+    defaults: { _controller: SisUserBundle:User:index }    
+sis_user_add:
+    path:     /user/add
+    defaults: { _controller: SisUserBundle:User:add }   
+sis_user_create:
+    path:     /user/create
+    defaults: { _controller: SisUserBundle:User:create }      
+    methods: POST
+
+sis_user_edit:
+    path:     /user/edit/{id}
+    defaults: { _controller: SisUserBundle:User:edit }    
+sis_user_view:
+    path:     /user/view/{id}
+    defaults: { _controller: SisUserBundle:User:view }    
+sis_user_delete:
+    path:     /user/delete/{id}
+    defaults: { _controller: SisUserBundle:User:delete } 
+sis_user_form:
+    path:     /user/form
+    defaults: { _controller: SisUserBundle:User:form }    
+sis_user_redirect_add:
+    path:     /user/create
+    defaults: 
+            _controller: SisUserBundle:User:add
+            path: /user/add
+            permanent: true
+                 
